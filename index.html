@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #050210;
+            
+            
+        }
+
+        
+        #div-1 {
+            
+            position: absolute;
+            top: 25px;
+            bottom: 25px;
+            width: 250px;
+            height: 250px;
+
+           
+
+
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+
+            border: 0px solid #050210;
+            border-radius: 100%;
+
+            animation-name: first-animation;
+            animation-duration: 1.2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+
+            transform-style: preserve-3d;
+
+        }
+        
+        
+        #div-2 {
+            position: relative;
+            top: 275px;
+            width: 300px;
+            height: 300px;
+
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+
+            border: 0px solid #050210;
+            border-radius: 100%;
+
+            animation-name: second-animation;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards;
+            transform-style: preserve-3d;
+        }
+ 
+        
+        
+
+        #container::before {
+            content: '';
+            position: absolute;
+            top: 250px;
+            bottom: 25px;
+            width: 350px;
+            height: 350px;
+            margin: 0 auto;
+            left:0;
+            right: 0;
+            border: 0px solid #050210;
+            border-radius: 100%;
+
+            animation-name: second-animation;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards;
+            transform-style: preserve-3d;
+
+            filter:blur(40px)
+                opacity(50%)
+            
+            
+        }
+        
+        @keyframes first-animation {
+
+            0% {
+                background: radial-gradient(#0e0431 0%, #050210 0%);
+            }
+
+            10% {
+                
+                background: radial-gradient(#0e0431 5% , #050210 0% );
+            }
+
+            20% {
+                background: radial-gradient(#0e0431 10%,  #050210 0% );
+            }
+
+            30% {
+                background: radial-gradient(#0e0431 15%,  #050210 0%);
+            }
+
+            40% {
+                background: radial-gradient(#0e0431 20%,  #050210 0%);
+            }
+
+            50% {
+                background: radial-gradient(#0e0431 30%,  #050210 0%);
+            }
+
+            60% {
+                background: radial-gradient(#0e0431 40%,  #050210 0%);
+            }
+
+            70% {
+                background: radial-gradient(#0e0431 50%,  #050210 0%);
+            }
+            
+            80% {
+                background: radial-gradient(#0e0431 60%,  #050210 0%);
+            }  
+
+            90% {
+                background: radial-gradient(#0e0431 65%,  #050210 35%);
+            }
+
+            100% {
+                background: radial-gradient(#0e0431 80%,  #050210 20%);
+                
+            }
+        }
+        
+        @keyframes second-animation {
+
+            0% {
+                background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+               
+                transform: rotate3d(0, 0, 1, 0deg);
+            }
+            33% {
+                background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+                transform: rotate3d(0, 0, 1, 120deg);
+            }
+
+            66% {
+                background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+                
+                transform: rotate3d(0, 0, 1, 240deg);
+            }
+
+            100% {
+                background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+                
+                transform: rotate3d(0, 0, 1, 360deg);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+        <div id="container">
+            <div id="div-2">
+                <div id="div-1">
+                </div>
+            </div>
+        </div>   
+    
+        
+    
+
+    
+
+</body>
+</html>
